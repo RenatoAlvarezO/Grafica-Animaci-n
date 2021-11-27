@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="300"
+        x:Class="Animacion.MainWindow"
+        Title="Animacion">
+    <StackPanel HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+            <TextBlock VerticalAlignment="Center" Text="Objetos:" Margin="0,0,20,0" />
+            <ComboBox HorizontalAlignment="Center" Name="ObjectComboBox" SelectionChanged="ObjectSelected" />
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+            <TextBlock VerticalAlignment="Center" Text="Caras:" Margin="0,0,20,0" />
+            <ComboBox HorizontalAlignment="Center" Name="FaceComboBox" />
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" Margin="0,20,0,20">
+            <TextBlock VerticalAlignment="Center" Text="Acción:" Margin="0,0,20,0" />
+            <ComboBox HorizontalAlignment="Center" Name="ModeComboBox" SelectionChanged="ModeSelected" />
+        </StackPanel>
+        
+        <ToggleSwitch Name="TexutreSwitch" Content="Textura" Tapped="SwitchHandler"></ToggleSwitch>
+        
+        <StackPanel Margin="0,20,0,0">
+            <TextBlock HorizontalAlignment="Left" Text="X:" Margin="0,0,20,0" />
+            <Slider Name="XSlider" Minimum="-180" Maximum="180" PropertyChanged="SliderHandler"></Slider>
+            <TextBlock HorizontalAlignment="Left" Text="Y:" Margin="0,0,20,0" />
+            <Slider Name="YSlider" Minimum="-180" Maximum="180" PropertyChanged="SliderHandler"></Slider>
+            <TextBlock HorizontalAlignment="Left" Text="Z:" Margin="0,0,20,0" />
+            <Slider Name="ZSlider" Minimum="-180" Maximum="180" PropertyChanged="SliderHandler"></Slider>
+            <Button Name="ActionBtn" Click="applyAction"> Agregar Acción</Button>
+        </StackPanel>
+    </StackPanel>
+</Window>
